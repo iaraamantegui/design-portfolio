@@ -1,0 +1,551 @@
+ /* Import Fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ /* Global Styles */
+ body {
+     font-family: 'Poppins', sans-serif;
+     background-color: white;
+     color: #03182c;
+     text-align: center;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ /* Header Styles */
+ header {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 0;
+     background-color: white;
+     width: 100%;
+     max-width: 1200px;
+     margin: auto;
+ }
+ 
+ .logo {
+     font-weight: bold;
+     font-size: 20px;
+     display: block;
+     padding: 20px 0;
+ }
+ 
+ .logo img {
+     width: 100px;
+     height: auto;
+ }
+ 
+ /* Navigation Styles */
+ nav {
+     display: flex;
+     justify-content: center;
+     padding: 10px 0;
+ }
+ 
+ nav ul {
+     list-style: none;
+     display: flex;
+     gap: 20px;
+     padding: 0;
+ }
+ 
+ nav ul li {
+     display: inline;
+ }
+ 
+ nav ul li a {
+     text-decoration: none;
+     color: #03182c;
+     font-size: 18px;
+     font-family: 'Poppins', sans-serif;
+ }
+ 
+ nav ul li a:hover {
+     color: #afddbd;
+     text-decoration: underline;
+ }
+ 
+ /* Hero Section Styles */
+ .hero {
+     padding: 20px;
+     text-align: center;
+     height: 40vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .hero h1 {
+     font-size: 3em;
+     margin-bottom: 10px;
+     text-align: left;
+     width: 100%;
+     margin-left: 680px;
+ }
+ 
+ .hero h2 {
+     font-size: 1.5em;
+     text-align: left;
+     width: 100%;
+     margin-left: 680px;
+ }
+ 
+ .hero h1::after,
+ .hero h2::after {
+     content: '.';
+     color: #afddbd;
+ }
+ 
+ /* Gallery Styles */
+ .gallery {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 20px;
+     padding: 20px;
+     max-width: 1200px;
+     margin: 130px auto 0;
+ }
+ 
+ .project img {
+     width: 100%;
+     height: auto;
+     border-radius: 10px;
+     transition: transform 0.3s ease;
+ }
+ 
+ .project img:hover {
+     transform: scale(1.05);
+ }
+ 
+ /* General styles for all images */
+ img {
+     width: 100%; /* Full width for images */
+     height: auto; /* Maintain aspect ratio */
+     transition: transform 0.3s ease; /* Transition for scaling */
+ }
+ 
+ /* Hover scaling effect for all images */
+ img:hover {
+     transform: scale(1.05); /* Scale effect on hover */
+ }
+ 
+ /* Styles specific to the gallery in index.html */
+ .gallery .project {
+     position: relative; /* Positioning context for the overlay */
+     overflow: hidden; /* Hide overflow to keep the overlay within bounds */
+ }
+ 
+ .gallery .overlay {
+     position: absolute; /* Position overlay absolutely within the project */
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: rgba(0, 0, 0, 0.5); /* Use rgba for proper transparency */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 0; /* Start hidden */
+     transition: opacity 0.3s ease; /* Transition for fade effect */
+    
+ }
+ 
+ /* Show overlay on hover for gallery images */
+ .gallery .project:hover .overlay {
+     opacity: 1; /* Show overlay on hover */
+     
+ }
+ 
+ /* Apply hover scaling effect specifically for gallery images */
+ .gallery .project img {
+     transition: transform 0.3s ease; /* Ensure transition is applied */
+    
+ }
+ 
+ .gallery .project:hover img {
+     transform: scale(1.05); /* Scale effect on hover */
+     
+ }
+ 
+ /* Footer Styles */
+ footer {
+     margin-top: 50px;
+     padding: 20px;
+     color: #03182c;
+     text-align: center;
+ }
+ 
+ footer .social-icons {
+     margin-bottom: 10px;
+ }
+ 
+ footer .social-icons a {
+     color: #03182c;
+     font-size: 28px; /* Increased size */
+     margin: 0 10px;
+     text-decoration: none;
+     transition: transform 0.3s ease;
+ }
+ 
+ footer .social-icons a:hover {
+     transform: scale(1.1);
+     color: #afddbd;
+ }
+ 
+ footer p {
+     font-size: 12px; /* Reduced size */
+     margin-top: 5px;
+ }
+ 
+ /* About Section Styles */
+ .about {
+     max-width: 1200px;
+     margin: 50px auto;
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ .about-container {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 40px;
+     flex-wrap: wrap;
+ }
+ 
+ .about-image img {
+     width: 100%;
+     height: auto;
+     max-width: 550px; /* Ensure the image is responsive but doesn't stretch beyond 550px */
+     border-radius: 10px;
+ }
+ 
+ .about-text {
+     text-align: left;
+     max-width: 600px;
+ }
+ 
+ .about-text h1 {
+     font-size: 2em;
+     margin-bottom: 10px;
+ }
+ 
+ .about-text p {
+     font-size: 1.2em;
+     line-height: 1.6;
+ }
+ 
+ .about-text ul {
+     list-style-type: none;
+     padding: 0;
+ }
+ 
+ .about-text ul li {
+     font-size: 1.1em;
+     margin-bottom: 5px;
+ }
+ 
+ .social-icons {
+     margin-top: 10px;
+ }
+ 
+ .social-icons a {
+     color: #03182c;
+     font-size: 30px;
+     margin-right: 15px;
+     text-decoration: none;
+     transition: transform 0.3s ease;
+ }
+ 
+ .social-icons a:hover {
+     transform: scale(1.1);
+ }
+ 
+ /* Contact Section Styles */
+ .contact {
+     max-width: 1200px;
+     margin: 50px auto;
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ .contact-text {
+     font-size: 1.2em;
+     line-height: 1.6;
+ }
+ 
+ .contact h1 {
+     font-size: 2.5em; /* Increased font size for a larger h1 */
+     margin-bottom: 20px; /* Optional: adjust margin for spacing */
+ }
+ .social-icons a:hover {
+    transform: scale(1.1);
+    color: #afddbd;
+}
+ 
+ /* Project Page Styles */
+ 
+ .project-hero img {
+     margin-top: 50px;
+     width: 100%;
+     height: auto;
+     display: block;
+ }
+ 
+ .project-content {
+     max-width: 800px;
+     margin: 40px auto;
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ .project-content h1 {
+     font-size: 4rem;
+     margin-bottom: 10px;
+ }
+ 
+ .project-content p {
+     font-size: 1.1rem;
+     color: #555;
+     margin-bottom: 20px;
+ }
+ 
+ .project-content h2 {
+     font-size: 1.5rem;
+     margin-top: 20px;
+ }
+ .project-content h3 {
+     font-size: 1.5rem;
+     color: #8ac59c;
+  
+ }
+ .project-content ul {
+     list-style: none;
+     padding: 0;
+ }
+ 
+ .project-content ul li {
+     font-size: 1.1rem;
+     color: #444;
+     margin: 5px 0;
+ }
+ .project-video {
+     margin-top: 50px;
+ }
+ 
+ .project-video iframe {
+     width: 100%;
+     height: 600px;
+     border-radius: 10px;
+ }
+ 
+ .prototype-button {
+     display: inline-block;
+     background-color: #03182c;
+     color: white;
+     padding: 12px 20px;
+     font-size: 1.2rem;
+     text-decoration: none;
+     border-radius: 5px;
+     transition: 0.3s;
+     margin-top: 30px;
+ }
+ 
+ .prototype-button:hover {
+     background-color: #afddbd;
+ }
+  
+ .image-gallery {
+    max-width: 1200px; /* Optional: limit the max width of the gallery */
+    margin: auto; /* Center the gallery */
+}
+
+.row {
+    display: flex; /* Use flexbox for side-by-side images */
+    justify-content: center; /* Center the images */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.row .project {
+    flex: 1; /* Allow the project divs to grow equally */
+    margin: 0 10px; /* Add margin between images */
+}
+
+.row img {
+    width: 100%; /* Full width for images within the project */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width for the images */
+}
+
+.full-width {
+    width: calc(100% - 20px); /* Adjust width to account for margins */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px auto; /* Center the image and add vertical spacing */
+}
+
+.stack {
+    display: flex; /* Use flexbox for stacked images */
+    flex-direction: column; /* Stack images vertically */
+    margin-bottom: 20px; /* Space below the stacked images */
+}
+
+.grid-4 {
+    display: grid; /* Use grid for the last set of images */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between grid items */
+    margin-bottom: 20px; /* Space below the grid */
+}
+
+.grid-4 img {
+    width: 100%; /* Full width for grid images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.gallery .overlay .text {
+    color: white; /* Text color */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Add some padding around the text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for better readability */
+}
+
+ /* Responsive Styles */
+ @media (max-width: 768px) {
+     .hero {
+         height: 60vh; /* Increase height to fill the screen */
+         padding: 40px;
+     }
+ 
+     .hero h1 {
+         font-size: 3em;
+         margin-left: 0;
+     }
+ 
+     .hero h2 {
+         font-size: 1.2em;
+         margin-left: 0;
+     }
+ 
+     .gallery {
+         grid-template-columns: 1fr; /* Stack gallery items vertically */
+         margin: 20px auto 0;
+     }
+ 
+     .project img {
+         max-width: 100%;
+     }
+ 
+     nav ul {
+         flex-direction: column;
+         gap: 10px;
+     }
+ 
+     footer {
+         margin-top: 50px;
+         padding: 20px;
+         color: #03182c;
+         text-align: center;
+     }
+ 
+     footer .social-icons {
+         margin-bottom: 10px;
+     }
+ 
+     footer .social-icons a {
+         color: #03182c;
+         font-size: 60px;
+         margin: 0 15px;
+         text-decoration: none;
+         transition: transform 0.3s ease;
+     }
+ 
+     footer .social-icons a:hover {
+         transform: scale(1.1);
+     }
+ 
+     footer p {
+         font-size: 14px;
+     }
+ 
+     /* About Section - Small Screens */
+     .about-container {
+         flex-direction: column; /* Stack the content vertically */
+         align-items: center;
+     }
+ 
+     .about-image img {
+         max-width: 100%; /* Ensure the image doesn't overflow */
+     }
+ 
+     .about-text {
+         text-align: center; /* Center the text */
+         max-width: 90%; /* Allow text to take more width */
+     }
+ 
+     .about-text h1 {
+         font-size: 1.8em;
+     }
+ 
+     .about-text p {
+         font-size: 1em;
+     }
+ 
+     .about-text ul li {
+         font-size: 1em;
+     }
+ 
+     /* Contact Section - Small Screens */
+     .contact-text {
+         font-size: 1em; /* Make text a bit smaller */
+         padding: 0 10px;
+         text-align: center;
+     }
+ 
+     .contact form {
+         width: 100%; /* Ensure the form elements span the width */
+         padding: 20px;
+     }
+ 
+     .contact input, .contact textarea {
+         width: 100%; /* Make input fields and text areas span the width */
+         padding: 10px;
+         font-size: 1em;
+         margin-bottom: 15px;
+     }
+ 
+     .contact button {
+         font-size: 1.2em;
+         padding: 10px 20px;
+     }
+ }
+ 
+ @media (max-width: 480px) {
+     .hero {
+         height: 70vh; /* Further adjust height for very small screens */
+         padding: 30px;
+     }
+ 
+     .hero h1 {
+         font-size: 1.8em;
+     }
+ 
+     .hero h2 {
+         font-size: 1.1em;
+     }
+ 
+     footer p {
+         font-size: 12px;
+     }
+ 
+     .contact-text {
+         font-size: 0.9em; /* Further reduce text size */
+     }
+ 
+     .contact input, .contact textarea {
+         font-size: 0.9em; /* Adjust input fields for small screens */
+     }
+ }
+
