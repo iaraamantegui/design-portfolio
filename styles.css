@@ -556,4 +556,138 @@
          font-size: 0.9em; /* Adjust input fields for small screens */
      }
  }
+/* ==================================================
+   CASE STUDY INTRO (Style: Cheil/Samsung)
+   ================================================== */
+   .case-intro-container {
+    max-width: 1000px;
+    margin: 60px auto 80px auto;
+    padding: 0 20px;
+    text-align: left; /* Forza la alineación a la izquierda */
+    color: #03182c;
+}
 
+.case-main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    margin-top: 0;
+}
+
+/* Grilla para Título de Rol y Descripción */
+.case-description-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Columna izq más pequeña, der más grande */
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.case-role-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.case-role-subtitle {
+    font-size: 1.6rem;
+    font-weight: 400; /* Texto normal, no negrita */
+    margin: 0;
+}
+
+.case-description-text {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Sección ROLE & SCOPE */
+.role-scope-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.role-scope-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-bottom: 20px;
+    font-size: 1.15rem;
+}
+
+.role-scope-top strong {
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.role-scope-divider {
+    border: none;
+    border-top: 1px solid #03182c; /* Línea separadora */
+    margin: 20px 0 40px 0;
+}
+
+.role-scope-bottom {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.scope-list-group strong {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+}
+
+.scope-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scope-list li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .case-description-grid, .role-scope-bottom {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        gap: 30px;
+    }
+    .case-main-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    .role-scope-top {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* ==================================================
+   CASE STUDY SECTION HEADERS (Alineado a la Izquierda)
+   ================================================== */
+   .case-section-header {
+    max-width: 1000px;
+    margin: 80px auto 30px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.case-section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #03182c;
+}
+
+.case-section-header p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #03182c;
+    margin: 0;
+    max-width: 850px; /* Limita un poco el ancho del texto para que sea fácil de leer */
+}
