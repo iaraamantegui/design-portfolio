@@ -691,3 +691,27 @@
     margin: 0;
     max-width: 850px; /* Limita un poco el ancho del texto para que sea fácil de leer */
 }
+/* ==================================================
+   AJUSTE DE TAMAÑO DE TEXTO (Caso de Estudio)
+   ================================================== */
+   .case-intro-container .case-main-title {
+    font-size: 2.8rem; /* Reducido un poco para que no domine toda la pantalla */
+}
+
+.case-role-title, 
+.case-role-subtitle {
+    font-size: 1.3rem !important; /* Textos de rol más proporcionados */
+}
+
+.case-description-text, 
+.role-scope-top, 
+.scope-list li, 
+.case-section-header p {
+    font-size: 1.05rem !important; /* Texto de párrafos más sutil y legible */
+    line-height: 1.6;
+}
+
+.role-scope-title, 
+.case-section-header h2 {
+    font-size: 1.6rem !important; /* Títulos de sección más limpios */
+}
